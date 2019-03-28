@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "text": "Quelle est la couleur du cheval blanc d'Henry IV ?",
+      "answers": [
+        {
+          "text": "Bleu"
+        },
+        {
+          "text": "Blanc",
+          "right": true
+        },
+        {
+          "text": "Rouge"
+        },
+        {
+          "text": "Vert"
+        }
+      ]
+    },
+    {
+      "text": "La vie l'univers, tout ça ?",
+      "answers": [
+        {
+          "text": "42",
+          "right": true
+        },
+        {
+          "text": "666"
+        },
+        {
+          "text": "2048"
+        },
+        {
+          "text": "777"
+        }
+      ]
+    }
+  ]
+}

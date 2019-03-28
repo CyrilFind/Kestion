@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import com.cyrilfind.kestion.extensions.flash
+import com.squareup.moshi.Moshi
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.properties.Delegates
 
@@ -34,17 +35,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initGame() {
-        val answers = listOf(
-            GameAnswer("Bleu"),
-            GameAnswer("Blanc", true),
-            GameAnswer("Rouge"),
-            GameAnswer("Vert")
-        )
-
-        val question = GameQuestion("Quelle est la couleur du cheval blanc d'Henry IV ?", answers)
-        val question2 = GameQuestion("Quelle est la couleur de l'autre cheval blanc d'Henry IV ?", answers)
-
-        game = Game(listOf(question, question2))
+        val json = resources.openRawResource(R.raw.game).bufferedReader().use { it.readText() }
+        game = Moshi.Builder()
+            .build()
+            .adapter(Game::class.java)
+            .fromJson(json) as Game
     }
 
     private fun initQuestion() {
