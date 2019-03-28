@@ -36,10 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initGame() {
         val json = resources.openRawResource(R.raw.game).bufferedReader().use { it.readText() }
-        game = Moshi.Builder()
-            .build()
-            .adapter(Game::class.java)
-            .fromJson(json) as Game
+        game = GameJsonAdapter(Moshi.Builder().build()).fromJson(json) ?: error("json load error")
     }
 
     private fun initQuestion() {

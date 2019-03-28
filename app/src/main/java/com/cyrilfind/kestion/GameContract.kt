@@ -1,5 +1,8 @@
 package com.cyrilfind.kestion
 
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
 data class Game(val questions: List<GameQuestion>)
 
 data class GameQuestion(
