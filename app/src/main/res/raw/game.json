@@ -1,6 +1,25 @@
 {
   "questions": [
     {
+      "text": "Meilleur smartphone de tous les temps",
+      "image_res_name": "phone",
+      "answers": [
+        {
+          "text": "iPhone 5"
+        },
+        {
+          "text": "Nexus 5",
+          "right": true
+        },
+        {
+          "text": "Pixel 2"
+        },
+        {
+          "text": "iPhone X"
+        }
+      ]
+    },
+    {
       "text": "Quelle est la couleur du cheval blanc d'Henry IV ?",
       "answers": [
         {
@@ -19,7 +38,7 @@
       ]
     },
     {
-      "text": "La vie l'univers, tout ça ?",
+      "text": "La vie, l'univers, tout ça ?",
       "answers": [
         {
           "text": "42",

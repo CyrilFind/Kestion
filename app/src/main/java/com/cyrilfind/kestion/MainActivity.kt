@@ -3,8 +3,10 @@ package com.cyrilfind.kestion
 import android.app.AlertDialog
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.Button
 import com.cyrilfind.kestion.extensions.flash
+import com.cyrilfind.kestion.jsonadapter.DrawableResNameAdapter
 import com.squareup.moshi.Moshi
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.properties.Delegates
@@ -36,11 +38,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun initGame() {
         val json = resources.openRawResource(R.raw.game).bufferedReader().use { it.readText() }
-        game = GameJsonAdapter(Moshi.Builder().build()).fromJson(json) ?: error("json load error")
+        val moshi = Moshi.Builder().add(DrawableResNameAdapter(this)).build()
+        game = GameJsonAdapter(moshi).fromJson(json) ?: error("json load error")
     }
 
     private fun initQuestion() {
         question_text_view.text = currentQuestion.text
+        currentQuestion.image?.let {
+            question_image_view.visibility = View.VISIBLE
+            question_image_view.setImageDrawable(it)
+        } ?: run {
+            question_image_view.visibility = View.GONE
+        }
         answerButtons.forEachIndexed { index, button -> button.text = currentQuestion.answers[index].text }
     }
 
