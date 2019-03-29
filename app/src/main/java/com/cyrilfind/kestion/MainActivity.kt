@@ -79,9 +79,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun showDialog() {
         AlertDialog.Builder(this)
-            .setMessage("Bravo !")
+            .setMessage("Congrats !")
             .setCancelable(false)
-            .setPositiveButton("Recommencer") { _, _ -> recreate() }
+            .setPositiveButton("Restart") { _, _ -> recreate() }
             .create()
             .show()
     }

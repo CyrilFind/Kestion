@@ -1,44 +1,44 @@
 {
   "questions": [
     {
-      "text": "Meilleur smartphone de tous les temps",
+      "text": "Who invented the iPhone",
       "image_res_name": "phone",
       "answers": [
         {
-          "text": "iPhone 5"
+          "text": "Isaac Newton"
         },
         {
-          "text": "Nexus 5",
+          "text": "Steve Jobs",
           "right": true
         },
         {
-          "text": "Pixel 2"
+          "text": "Bill Gates"
         },
         {
-          "text": "iPhone X"
+          "text": "Larry Page"
         }
       ]
     },
     {
-      "text": "Quelle est la couleur du cheval blanc d'Henry IV ?",
+      "text": "What is the alter-ego of the DC comics character Superman",
       "answers": [
         {
-          "text": "Bleu"
+          "text": "Bruce Wayne"
         },
         {
-          "text": "Blanc",
+          "text": "Arthur Curry"
+        },
+        {
+          "text": "Clark Kent",
           "right": true
         },
         {
-          "text": "Rouge"
-        },
-        {
-          "text": "Vert"
+          "text": "Peter Parker"
         }
       ]
     },
     {
-      "text": "La vie, l'univers, tout ça ?",
+      "text": "Life, the universe and whatever ?",
       "answers": [
         {
           "text": "42",
